@@ -1,0 +1,42 @@
+:root {
+  --bg: rgba(248, 249, 250, 0.8); /* translucent light Notion color */
+  --accent: #2563eb;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --radius: 24px;
+  --shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius);
+  display: flex;
+  gap: 20px;
+  padding: 12px 28px;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+.nav-item {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav-item.active {
+  color: var(--accent);
+  font-weight: 600;
+  background-color: rgba(37, 99, 235, 0.15);
+}

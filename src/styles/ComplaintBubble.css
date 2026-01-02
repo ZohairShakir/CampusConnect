@@ -1,0 +1,45 @@
+.complaint-bubble {
+  position: fixed;
+  right: 20px;
+  bottom: 90px; /* stays above bottom navbar */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover = life */
+.complaint-bubble:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
+
+/* Text */
+.bubble-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Mobile – icon only */
+@media (max-width: 640px) {
+  .bubble-text {
+    display: none;
+  }
+
+  .complaint-bubble {
+    padding: 12px;
+  }
+}
